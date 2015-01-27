@@ -87,23 +87,32 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjn-So-Edg">
-                                <rect key="frame" x="279" y="180" width="42" height="21"/>
+                                <rect key="frame" x="279" y="180" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="KPs-DJ-WJX">
+                                <rect key="frame" x="0.0" y="210.5" width="600" height="389.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KPs-DJ-WJX" firstAttribute="leading" secondItem="MNE-DI-ssO" secondAttribute="leading" id="7Mq-zS-Zva"/>
                             <constraint firstItem="Gjn-So-Edg" firstAttribute="top" secondItem="IjU-Q6-018" secondAttribute="bottom" constant="8" id="BNe-dM-goz"/>
                             <constraint firstAttribute="centerX" secondItem="IjU-Q6-018" secondAttribute="centerX" id="Hlk-EI-twB"/>
+                            <constraint firstAttribute="trailing" secondItem="KPs-DJ-WJX" secondAttribute="trailing" id="OQf-wY-FSY"/>
                             <constraint firstItem="IjU-Q6-018" firstAttribute="top" secondItem="OoO-X6-JZL" secondAttribute="bottom" constant="8" id="Qah-fZ-lVL"/>
+                            <constraint firstItem="FRo-ZV-JBb" firstAttribute="top" secondItem="KPs-DJ-WJX" secondAttribute="bottom" id="UOG-q9-04M"/>
                             <constraint firstAttribute="centerX" secondItem="Gjn-So-Edg" secondAttribute="centerX" id="aKr-sa-mFd"/>
+                            <constraint firstItem="KPs-DJ-WJX" firstAttribute="top" secondItem="Gjn-So-Edg" secondAttribute="bottom" constant="10" id="mNz-jM-Oek"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="albumCover" destination="IjU-Q6-018" id="YTl-iG-nCt"/>
                         <outlet property="titleLable" destination="Gjn-So-Edg" id="eay-cb-x0V"/>
+                        <outlet property="tracksTableView" destination="KPs-DJ-WJX" id="XCV-lN-jsN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VW-w4-s7G" userLabel="First Responder" sceneMemberID="firstResponder"/>

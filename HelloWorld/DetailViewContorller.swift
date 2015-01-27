@@ -8,9 +8,10 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var album:Album?
     
+    @IBOutlet weak var tracksTableView: UITableView!
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var albumCover: UIImageView!
     required init(coder aDecoder: NSCoder) {
@@ -21,5 +22,12 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         titleLable.text = album?.title
         albumCover.image = UIImage(data: NSData(contentsOfURL: NSURL(string: self.album!.largeImageURL)!)!)
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }
